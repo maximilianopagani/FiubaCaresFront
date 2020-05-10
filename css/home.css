@@ -3,14 +3,14 @@ body {
 }
 
 .color-green {
-    color: #16d80d !important;
+    color: #19ad12 !important;
 }
 
 .bg-black {
     background-color: #000000;
 }
 
-.nav-link:hover, .navbar-brand:hover, #tips:hover {
+.nav-link:hover, .navbar-brand:hover {
     opacity: 0.7 !important;
 }
 
@@ -32,18 +32,20 @@ body {
     margin-left: 6%;
     padding: 1%;
     margin-top: 30px;
-    border-style: solid;
+    border: 2px solid rgb(0, 0, 0, .4);
     float: left;
 }
 
 .circle {
     margin-right: 6%;
     margin-top: 60px;
-    padding-top: 45px;
+    padding-top: 40px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border-style: solid;
+    border: 2px solid rgb(0, 0, 0, .4);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     text-align: center;
     background: #ffffff;
     float: right;
