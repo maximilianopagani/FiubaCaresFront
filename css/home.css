@@ -1,0 +1,43 @@
+body {
+    background-image: url("../img/pasto.jpg");
+}
+
+.color-green {
+    color: #16d80d !important;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.nav-link:hover, .navbar-brand:hover, #tips:hover {
+    opacity: 0.7 !important;
+}
+
+.nav-link {
+    margin-left: 1rem;
+}
+
+.content {
+    background-color: #ffffff;
+    width: 60%;
+    margin-left: 6%;
+    padding: 1%;
+    margin-top: 30px;
+    border-style: solid;
+    float: left;
+}
+
+.circle {
+    margin-right: 6%;
+    margin-top: 60px;
+    padding-top: 45px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-style: solid;
+    text-align: center;
+    background: #ffffff;
+    float: right;
+    color: #000000;
+}
