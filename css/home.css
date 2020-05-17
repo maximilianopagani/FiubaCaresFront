@@ -1,5 +1,5 @@
 body {
-    background-image: url("../img/pasto.jpg");
+    background-image: url("../img/bosque-1-e1577589217640.jpg");
 }
 
 .color-green {
@@ -26,28 +26,51 @@ body {
     margin-left: 5rem;
 }
 
+
+
 .content {
-    background-color: #ffffff;
-    width: 60%;
-    margin-left: 6%;
-    padding: 1%;
-    margin-top: 30px;
-    border: 2px solid rgb(0, 0, 0, .4);
-    float: left;
+    width: 70%;
+    margin: 30px auto 0 auto;
+}
+
+.presentation {
+    background-color: rgba(26, 26, 26, 0.7);
+    color: #ffffff;
+    width: 100%;
+    margin: 50px auto 0 auto;
+    padding: 5%;
+    #border: 2px solid rgb(0, 0, 0, .4);
+    font-weight: bold;
+}
+
+#tips {
+    width: auto;
+    overflow: auto;
 }
 
 .circle {
-    margin-right: 6%;
-    margin-top: 60px;
-    padding-top: 40px;
-    width: 200px;
-    height: 200px;
+    margin-left: 50px;
+    margin-top: 3px;
+    padding-top: 25px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 2px solid rgb(0, 0, 0, .4);
+    #border: 2px solid rgb(0, 0, 0, .4);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     text-align: center;
-    background: #ffffff;
-    float: right;
-    color: #000000;
+    background-color: rgba(121, 111, 111, 0.85);
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.circle p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.circle .inner-circle {
+    width: 90%;
+    margin-left: 5%
 }
