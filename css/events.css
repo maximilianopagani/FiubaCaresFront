@@ -1,0 +1,25 @@
+.container {
+    width: 70%;
+    margin: 30px auto 0 auto;
+    padding: 15px 20px 40px;
+    border-radius: 50px;
+    background-color: #ffffff;
+}
+
+.img-square-wrapper img{
+    width: 300px;
+    height: 200px;
+}
+
+.charla-description {
+    display: inline;
+    margin-right: 5%;
+}
+
+#title {
+    text-align: center;
+}
+
+.card {
+   border: 2px solid rgba(0,0,0,.125);
+}

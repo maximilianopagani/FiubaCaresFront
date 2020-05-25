@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIUBA Cares - Charlas y Eventos</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/events.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/events.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-black navbar-dark justify-content-center">
+    <a class="navbar-brand color-green" href="../home/"><img src="https://i.ibb.co/MRr42Gg/icons8-recycle-26.png"> FIUBA Cares</a>
+    <ul class="navbar-nav navbar-center">
+        <li class="nav-item">
+            <a class="nav-link color-green" href="../events">Charlas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link color-green" href="#">Material</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link color-green" href="#">Juegos y Concursos</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link color-green" href="../login/login.html">Admin</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1 id="title">Charlas y Eventos</h1>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="card">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="" src="https://i.ibb.co/3cGJPS4/prueba-evento1.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Calentamiento climático</h4>
+                        <p class="card-text">Se va a hablar sobre la importancia del calentamiento climático y posibles formas para reducirlo. Charla a cargo de Fulano de Tal. Duración 2hs. Cupos limitados.</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="charla-description" title="Duración">
+                        <img src="https://i.ibb.co/6DTsYW5/icon-time.png" alt="duracion">
+                        <span>2hs</span>
+                    </div>
+                    <div class="charla-description" title="Autor">
+                        <img src="https://i.ibb.co/4mzwCnt/icon-autor.png" alt="autor">
+                        <span>Fulano de Tal</span>
+                    </div>
+                    <div class="charla-description" title="Ubicación">
+                        <img src="https://i.ibb.co/J3FGYq6/icon-ubication.png" alt="ubicacion">
+                        <span>San Telmo (Capital Federal)</span>
+                    </div>
+                    <div style="display: inline">
+                        <a href="#" class="btn btn-primary-custom btn-inscription float-right">Inscribirme</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="card">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="" src="https://i.ibb.co/DfFKyYQ/bosque-1-e1577589217640.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">La importancia de los bosques</h4>
+                        <p class="card-text">En esta charla se va a hacer hincapié en la necesidad de preservar los bosques naturales. Estos bosques desempeñan un papel fundamental ...</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="charla-description" title="Duración">
+                        <img src="https://i.ibb.co/6DTsYW5/icon-time.png" alt="duracion">
+                        <span>3hs</span>
+                    </div>
+                    <div class="charla-description" title="Autor">
+                        <img src="https://i.ibb.co/4mzwCnt/icon-autor.png" alt="autor">
+                        <span>Jorge Pino</span>
+                    </div>
+                    <div class="charla-description" title="Ubicación">
+                        <img src="https://i.ibb.co/J3FGYq6/icon-ubication.png" alt="ubicacion">
+                        <span>Posadas, Misiones</span>
+                    </div>
+                    <div style="display: inline">
+                        <a href="#" class="btn btn-primary-custom btn-inscription float-right">Inscribirme</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal Inscription -->
+<div class="modal fade" id="inscriptionModal" tabindex="-1" role="dialog" aria-labelledby="inscriptionWindow" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="inscriptionWindow">Inscripción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Acá van los inputs con la info que tiene que cargar
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

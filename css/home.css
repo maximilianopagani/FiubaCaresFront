@@ -1,46 +1,14 @@
-body {
-    background-image: url("https://i.ibb.co/DfFKyYQ/bosque-1-e1577589217640.jpg");
-}
-
-.color-green {
-    color: #19ad12 !important;
-}
-
-.bg-black {
-    background-color: #000000;
-}
-
-.nav-link:hover, .navbar-brand:hover {
-    opacity: 0.7 !important;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-}
-
-.nav-link {
-    font-size: 1.25rem;
-}
-
-.nav-link {
-    margin-left: 5rem;
-}
-
-
-
-.content {
+.container {
     width: 70%;
     margin: 30px auto 0 auto;
 }
 
 .presentation {
-    background-color: rgba(26, 26, 26, 0.7);
-    color: #ffffff;
+    background-color: #ffffff;
     width: 100%;
     margin: 50px auto 0 auto;
     padding: 5%;
-    #border: 2px solid rgb(0, 0, 0, .4);
-    font-weight: bold;
+    border-radius: 50px;
 }
 
 #tips {
@@ -58,7 +26,7 @@ body {
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     text-align: center;
-    background-color: rgba(121, 111, 111, 0.85);
+    background-color: rgba(36, 161, 63, 0.9);
     color: #ffffff;
     cursor: pointer;
     font-weight: bold;

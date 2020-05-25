@@ -1,0 +1,56 @@
+body {
+    background-image: url("https://i.ibb.co/Z8m8Gpc/login-background.jpg");
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+.color-green {
+    color: #19ad12 !important;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    opacity: 0.7 !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.nav-link {
+    margin-left: 5rem;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.btn-primary-custom,
+.btn-primary-custom:hover,
+.btn-primary-custom:active,
+.btn-primary-custom:visited,
+.btn-primary-custom:focus {
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-primary-custom {
+    background-color: #1FCC44;
+    border: none;
+}
+
+.btn-primary-custom:hover, .btn-primary-custom:active, .btn-primary-custom:focus {
+    background-color: #40e263;
+    border: none;
+}

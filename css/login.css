@@ -21,6 +21,7 @@ body {
         sans-serif;
     /* create a linear gradient*/
     background-image: url('https://i.ibb.co/Z8m8Gpc/login-background.jpg');
+    background-attachment: fixed;
     /*opacity:0.8;*/
     display: flex;
 }
