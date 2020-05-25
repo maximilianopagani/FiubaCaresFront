@@ -100,6 +100,7 @@ span {
     font-weight: bold;
     color: white;
     text-transform: uppercase;
+    font-size: 1.3rem;
 }
 
 #input_submit:hover {
