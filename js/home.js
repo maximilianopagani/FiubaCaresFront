@@ -16,6 +16,6 @@ $(document).ready(function () {
     $('.circle').click(function () {
         $('#tipsModal').modal('show');
         $('#tipsWindow').html($(this).find('.tip-title').html());
-    })
+    });
 
 });
