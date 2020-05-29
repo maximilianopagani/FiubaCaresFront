@@ -114,13 +114,6 @@ span {
     top: 30px;
 }*/ 
 
-a {
-    /* remove default underline */
-    text-decoration: none;
-    color: var(--submit_bg);
-    font-weight: bold;
-}
-
 a:hover {
     color: var(--submit_hover);
 }
