@@ -2,18 +2,41 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <title>FIUBA Cares-Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/login.js"></script>
+ 
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-sm bg-black navbar-dark justify-content-center">
+    <a class="navbar-brand color-green" href="../home/"><img src="https://i.ibb.co/MRr42Gg/icons8-recycle-26.png" alt="icons8-recycle-26" border="0"> FIUBA Cares</a>
+    <ul class="navbar-nav navbar-center">
+        <li class="nav-item">
+            <a class="nav-link color-green" href="../events/">Charlas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link color-green" href="#">Material</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link color-green" href="#">Juegos y Concursos</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link color-green" href="../login/login.html">Admin</a>
+        </li>
+    </ul>
+	</nav>
+
     <div id="form_wrapper">
     	<form id="form_login" method="post" name="login_form" onSubmit="return validated()">
             <h1>FIUBA Cares</h1>

@@ -7,6 +7,8 @@ function validated(){
 		return true;
 	}else{
 		alert("Email/Contraseña incorrectos, por favor ingréselos nuevamente");
+		//va a tener que redireccionar a la home en caso de haber iniciado sesion ok
+		location.href="../home/index.html";
 		return false;
 	}
 		
