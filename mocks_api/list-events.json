@@ -1,20 +1,21 @@
 [
 	{
-		"id": 1,
+		"_id": 1,
 		"title": "Calentamiento Climático",
 		"description": "Se va a hablar sobre la importancia del calentamiento climático y posibles formas para reducirlo. Cupos limitados, anotarse con anticipación.",
-		"ubication": "Capital Federal",
-		"duration": "2hs",
-		"autor": "Jose Luis Gomez",
-		"img": "https://i.ibb.co/3cGJPS4/prueba-evento1.jpg"
+		"meeting_place": "Capital Federal",
+		"meeting_datetime": "2020-06-20T03:00:00.000Z",
+		"author": "Jose Luis Gomez",
+		"quota": 30,
+		"img_src": "https://i.ibb.co/3cGJPS4/prueba-evento1.jpg"
 	},
 	{
-		"id": 2,
+		"_id": 2,
 		"title": "La importancia de los bosques",
 		"description": "En esta charla se va a hacer hincapié en la necesidad de preservar los bosques naturales. Estos bosques desempeñan un papel fundamental ...",
-		"ubication": "Posadas, Misiones",
-		"duration": "3hs",
-		"autor": "Jorge Pino",
-		"img": "https://i.ibb.co/DfFKyYQ/bosque-1-e1577589217640.jpg"
+		"meeting_place": "Posadas, Misiones",
+		"meeting_datetime": "2020-08-15T03:00:00.000Z",
+		"author": "Jorge Pino",
+		"quota": 20
 	}
 ]

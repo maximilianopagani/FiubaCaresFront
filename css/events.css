@@ -16,6 +16,11 @@
     margin-right: 5%;
 }
 
+.charla-description img {
+    width: 26px;
+    height: 26px;
+}
+
 #title {
     text-align: center;
 }
