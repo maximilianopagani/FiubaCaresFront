@@ -133,3 +133,7 @@ i {
     }
     /* on small screen we don't display the image */
 }
+
+#error-login {
+    display: none;
+}
