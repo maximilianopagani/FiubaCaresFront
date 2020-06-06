@@ -80,6 +80,7 @@ span {
     align-items: center;
     margin-right: 10px;
     margin-left: 10px;
+    overflow: hidden;
 }
 
 .input_field:hover,
@@ -135,4 +136,14 @@ a:hover {
 
 i {
     color: var(--icon_color);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: auto;
+  padding: 15px;
 }

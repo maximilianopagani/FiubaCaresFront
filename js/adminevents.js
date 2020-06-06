@@ -20,7 +20,9 @@ $(document).ready(function () {
 
         }
     });
-
+    $('.btn-addelement').click(function () {
+        location.href = './addevent.html';
+    });
 });
 
 function getEventCardHTML(element) {

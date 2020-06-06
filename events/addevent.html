@@ -37,7 +37,7 @@
 
     <div id="form_wrapper">
 
-    	<form id="form_addevent" method="post" onSubmit="return addevent()">
+    	<form id="form_addevent"  method="POST" y enctype="multipart/form-data">
 
             <h1>Nuevo evento</h1>
  			
@@ -75,7 +75,7 @@
 						<label for="field_image">
 
 					  		<img id="field_image_preview" src="https://i.ibb.co/f4QLT9v/upload-photo-icon.png" alt="upload-photo-icon" border="0" style="width:90%;height:90%;max-width:480px;max-height:320px;object-fit:contain;cursor:pointer;"/>
-					  		<input type="file" name="imagen" id="field_image" style="display:none;text-align:center;" accept="image/*" onchange="loadFile(event)" class='input_field' required />
+					  		<input type="file" name="imagen" id="field_image" style="display:none;text-align:center;" accept="image/*" onchange="loadImage(event)" class='input_field' required/>
 
 						</label>
 
@@ -93,6 +93,22 @@
 
             <input type="submit" value="Cargar evento" id='input_submit' class='input_submit' required>
     </div>
+
+	<div id="successModal" class="modal">
+
+	  <div class="modal-content">
+	    <p style="margin:15px">Evento cargado con éxito</p>
+	  </div>
+
+	</div>
+
+	<div id="errorModal" class="modal">
+
+	  <div class="modal-content">
+	    <p style="margin:15px">Hubo un error en la carga del evento, reintente mas tarde</p>
+	  </div>
+
+	</div>
 
 </body>
 
