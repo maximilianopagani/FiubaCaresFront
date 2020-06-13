@@ -103,6 +103,6 @@ function modEvent() {
 			$('#errorModal').modal('show');
 		})
 		.always(function() {
-			//setTimeout("location.href = './adminevents.html';", 2500);
+			setTimeout("location.href = './adminevents.html';", 2500);
 		});
 }
