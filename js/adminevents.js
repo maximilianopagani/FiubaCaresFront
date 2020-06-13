@@ -15,7 +15,7 @@ $(document).ready(function () {
                 alert("se va a borrar el elemento");
             });
             $('.btn-modify').click(function () {
-                alert("Aca deberia abrir el evento con los campos editables");
+                location.href = "./modevent.html?event_id=" + $(this).data('id');
             });
 
         }
@@ -33,8 +33,8 @@ function getEventCardHTML(element) {
         '                    <div class="card-body">\n' +
         '                       <div class="card-title">\n' + element.title + '\n' +
         '                       <div style="display: inline">\n' +
-        '                        <a href="#" class="btn btn-primary-custom btn-delete float-right">Borrar</a>\n' +
-        '                        <a href="#" class="btn btn-primary-custom btn-modify float-right">Modificar</a>\n' +        
+        '                        <a href="#" class="btn btn-primary-custom btn-delete float-right" data-id="' + element._id + '">Borrar</a>\n' +
+        '                        <a href="#" class="btn btn-primary-custom btn-modify float-right" data-id="' + element._id + '">Modificar</a>\n' +        
         '                    </div>\n' +
         '                    </div>\n' +
         '                </div>\n' +

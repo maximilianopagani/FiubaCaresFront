@@ -53,7 +53,7 @@ function addEvent(img_src) {
 		data: JSON.stringify({
 			"title": $("#field_title").val(),
 			"description": $("#field_desc_textarea").val(),
-			"author": $("#field_autor").val(),
+			"author": $("#field_author").val(),
 			"meeting_datetime": $("#field_date").val() + ' ' + $("#field_time").val(),
 			"meeting_place": $("#field_location").val(),
 			"quota": $("#field_quota").val(),
