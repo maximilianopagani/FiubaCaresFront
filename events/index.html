@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/events.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/inscriptionevent.css">
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/events.js"></script>
@@ -31,18 +32,66 @@
     <!-- Aca se van a ir agregando los eventos con js -->
 </div>
 
+
 <!-- Modal Inscription -->
 <div class="modal fade" id="inscriptionModal" tabindex="-1" role="dialog" aria-labelledby="inscriptionWindow" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="inscriptionWindow">Inscripción</h5>
+                <h5 class="w-100 modal-title text-center" id="inscriptionWindow">Inscripción</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                Acá van los inputs con la info que tiene que cargar
+                <div id="registration-summary">
+                    <div class="charla-description" title="Fecha">
+                        <img src="https://i.ibb.co/0hzDTsm/icon-calendar.png" alt="fecha">
+                        <span id="registration-summary-date"></span>
+                    </div>
+                    <div class="charla-description" title="Horario">
+                        <img src="https://i.ibb.co/6DTsYW5/icon-time.png" alt="horario">
+                        <span><span id="registration-summary-time"></span> hs</span>
+                    </div>
+                    <div class="charla-description" title="Cupo">
+                        <img src="https://i.ibb.co/qDJRpCX/icon-quota.png" alt="cupo">
+                        <span id="registration-summary-quota"></span>
+                    </div>
+                    <div class="charla-description" title="Autor">
+                        <img src="https://i.ibb.co/4mzwCnt/icon-autor.png" alt="autor">
+                        <span id="registration-summary-author"></span>
+                    </div>
+                    <div class="charla-description" title="Ubicación">
+                        <img src="https://i.ibb.co/J3FGYq6/icon-ubication.png" alt="ubicacion">
+                        <span id="registration-summary-meeting-place"></span>
+                    </div>
+                </div>
+                <div id="form_wrapper">
+                    <form id="form_inscription" method="post" name="form_inscription">
+                        <div class="input_container">
+                            <input placeholder="DNI" type="number" min="1" name="dni" id="field_dni" class='input_field' required>
+                        </div>
+                        <div class="input_container">
+                            <input placeholder="Email" type="email" name="email" id="field_email" class='input_field' required>
+                        </div>
+                    </form>
+                </div>
+                <div id="registration-success" style="display: none">
+                    <div class="alert alert-success" role="alert">
+                        Inscripción realizada con éxito
+                    </div>
+                    <p>Código de inscripción: <b id="registration-success-code"></b></p>
+                    <p>En caso de ser necesario, se le enviará información al email ingresado.</p>
+                </div>
+                <div id="registration-error" style="display: none">
+                    <div class="alert alert-danger" role="alert">
+                        Se ha producido un error, intente nuevamente más tarde
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-secondary-custom" data-dismiss="modal">CERRAR</button>
+                <button id="submit-button-inscription" type="submit" form="form_inscription" class="btn btn-primary-custom">INSCRIBIRME</button>
             </div>
         </div>
     </div>

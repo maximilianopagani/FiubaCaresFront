@@ -12,7 +12,7 @@
 }
 
 .charla-description {
-    display: inline;
+    display: inline-block;
     margin-right: 5%;
 }
 

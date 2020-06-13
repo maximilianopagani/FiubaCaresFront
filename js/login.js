@@ -1,6 +1,9 @@
 $(document).ready(function () {
 	$("#form_login").submit(function (event) {
 		event.preventDefault();
+		let btnSubmit = $("#input_submit");
+		btnSubmit.blur();
+		btnSubmit.prop("disabled", true);
 		$("#error-login").hide();
 		$.ajax({
 			type: "GET",
@@ -15,13 +18,17 @@ $(document).ready(function () {
 						return;
 					}
 				}
-				$("#error-login").show();
+				showMessageError();
 			},
 			error: function (data) {
-				$("#error-login").show();
+				showMessageError();
 			}
 		});
 	});
 
 });
 
+function showMessageError() {
+	$("#error-login").show();
+	$("#input_submit").prop("disabled", false);
+}
