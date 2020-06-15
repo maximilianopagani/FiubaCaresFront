@@ -31,11 +31,9 @@ function uploadImage() {
 
 	$.ajax(settings)
 		.done(function(data) {
-			//alert("Imagen cargada con exito.");
 			addEvent(JSON.parse(data).data.url);
 		})
 		.fail(function() {
-			//alert("Hubo un error en la carga de la imagen.");
 			addEvent('https://i.ibb.co/27h2dKB/noimage.png');
 		});
 }
@@ -54,7 +52,7 @@ function addEvent(img_src) {
 			"title": $("#field_title").val(),
 			"description": $("#field_desc_textarea").val(),
 			"author": $("#field_author").val(),
-			"meeting_datetime": $("#field_date").val() + ' ' + $("#field_time").val(),
+			"meeting_datetime": new Date($("#field_date").val() + ' ' + $("#field_time").val()),
 			"meeting_place": $("#field_location").val(),
 			"quota": $("#field_quota").val(),
 			"img_src": img_src

@@ -52,8 +52,8 @@ $(document).ready(function () {
 			$("#field_title").val(data.title);
 			$("#field_desc_textarea").val(data.description);
 			$("#field_author").val(data.author);
-			$("#field_date").val(new Intl.DateTimeFormat('es-AR').format(date));
-			$("#field_time").val(date.toLocaleTimeString('es-AR'));
+			$("#field_date").val(date.toDateString());
+			$("#field_time").val(date.toLocaleTimeString());
 			$("#field_location").val(data.meeting_place);
 			$("#field_quota").val(data.quota);
 			$("#field_image_preview").attr("src", data.img_src);
@@ -79,7 +79,7 @@ function modEvent() {
 	let settings = {
 		url: "https://fiuba-cares-back.herokuapp.com/api/events/" + getURLParam("event_id"),
 		type: "put",
-		contentType: "application/json; charset=UTF-8;",
+		contentType: "application/json",
 		dataType: "json",
 		headers: {
 			Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.oF_jJKavmWrM6d_io5M5PBiK9AKMf_OcK4xpc17kvwI"
@@ -88,9 +88,9 @@ function modEvent() {
 			"title": $("#field_title").val(),
 			"description": $("#field_desc_textarea").val(),
 			"author": $("#field_author").val(),
-			"meeting_datetime": $("#field_date").val() + ' ' + $("#field_time").val(),
+			"meeting_datetime": new Date($("#field_date").val() + ' ' + $("#field_time").val()),
 			"meeting_place": $("#field_location").val(),
-			"quota": $("#field_quota").val(),
+			"quota": parseInt($("#field_quota").val()),
 			"img_src": $("#field_image_preview").attr("src")
 		})
 	};
