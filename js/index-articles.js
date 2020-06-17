@@ -30,7 +30,7 @@ function getArticleCardHTML(element) {
         '                    </div>\n' +
         '                    <div class="card-body">\n' +
         '                        <h4 class="card-title">' + element.title + '</h4>\n' +
-        '                        <p class="card-text">' + element.description + '</p>\n' +
+        '                        <p class="card-text">' + getDescription(element) + '</p>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '                <div class="card-footer">\n' +
@@ -42,4 +42,14 @@ function getArticleCardHTML(element) {
         '            </div>\n' +
         '        </div>\n' +
         '    </div>';
+}
+
+function getDescription(element, maxLength=120) {
+    if (element.hasOwnProperty('description')) {
+        if (element.description.length >= maxLength) {
+            return element.description.substring(0, maxLength-1) + '...';
+        }
+        return element.description;
+    }
+    return '';
 }

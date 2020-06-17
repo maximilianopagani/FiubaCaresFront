@@ -96,7 +96,7 @@ function getEventCardHTML(element) {
         '                    </div>\n' +
         '                    <div class="card-body">\n' +
         '                        <h4 id="event-title-' + element._id + '" class="card-title">' + element.title + '</h4>\n' +
-        '                        <p id="event-description-' + element._id + '" class="card-text">' + element.description + '</p>\n' +
+        '                        <p id="event-description-' + element._id + '" class="card-text">' + getDescription(element) + '</p>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '                <div class="card-footer">\n' +
@@ -120,4 +120,25 @@ function getEventCardHTML(element) {
         '            </div>\n' +
         '        </div>\n' +
         '    </div>';
+}
+
+function getDescription(element, maxLength=300) {
+    if (element.hasOwnProperty('description')) {
+        if (element.description.length >= maxLength) {
+            return element.description.substring(0, maxLength-1) +
+                '<span id="dots-'+element._id+'">' +
+                    '...<a href="#" onclick="event.preventDefault(); viewMore(\''+element._id+'\');">mostrar más</a>' +
+                '</span>' +
+                '<span id="more-'+element._id+'" style="display: none">'+
+                    element.description.substring(maxLength-1)+
+                '</span>';
+        }
+        return element.description;
+    }
+    return '';
+}
+
+function viewMore(eventId) {
+    $("#dots-"+eventId).hide();
+    $("#more-"+eventId).show();
 }
