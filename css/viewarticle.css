@@ -1,0 +1,42 @@
+.img-wrapper {
+    width: 100%;
+}
+
+.img-wrapper img {
+    display: block;
+    margin: 25px auto;
+    max-width: 100%;
+}
+
+#date {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+#source-article {
+    text-align: right;
+}
+
+#div-description {
+    overflow: hidden;
+}
+
+#description:first-letter
+{
+    float:left;
+    color:black;
+    background:white;
+    font-size:80px;
+    line-height:60px;
+    padding:2px;
+    margin-right: 5px;
+}
+
+hr {
+    margin-top: 0.5rem;
+}
+
+#body-article {
+    margin-left: 20px;
+    margin-right: 20px;
+}

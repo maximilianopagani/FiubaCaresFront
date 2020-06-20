@@ -35,7 +35,7 @@ function getArticleCardHTML(element) {
         '                </div>\n' +
         '                <div class="card-footer">\n' +
         '                    <div style="display: inline">\n' +
-        '                        <a href="#' + element._id + '" class="btn btn-primary-custom float-right">Leer más</a>\n' +
+        '                        <a href="viewarticle.html?article_id=' + element._id + '" class="btn btn-primary-custom float-right">Leer más</a>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '\n' +

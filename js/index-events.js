@@ -10,7 +10,8 @@ $(document).ready(function () {
             data.forEach(function (element) {
                 container.append(getEventCardHTML(element))
             });
-            $('.btn-inscription').click(function () {
+            $('.btn-inscription').click(function (event) {
+                event.preventDefault();
                 showModalInscription($(this));
             });
         }
