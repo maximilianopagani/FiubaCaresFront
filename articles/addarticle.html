@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>FIUBA Cares - Nuevo artículo educativo</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/addarticle.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/addarticle.js"></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-black navbar-dark justify-content-center">
+
+	    <a class="navbar-brand color-green" href="../home/"><img src="https://i.ibb.co/MRr42Gg/icons8-recycle-26.png" alt="icons8-recycle-26" border="0"> FIUBA Cares</a>
+
+	    <ul class="navbar-nav navbar-center">
+	        <li class="nav-item">
+	            <a class="nav-link color-green" href="../articles/index.html">Charlas</a>
+	        </li>
+	        <li class="nav-item">
+	            <a class="nav-link color-green" href="../articles/">Material</a>
+	        </li>
+	        <li class="nav-item">
+	            <a class="nav-link color-green" href="#">Juegos y Concursos</a>
+	        </li>
+	    </ul>
+
+	</nav>
+
+    <div id="form_wrapper">
+
+    	<form id="form_addarticle"  method="POST" y enctype="multipart/form-data">
+
+            <h1>Nuevo artículo educativo</h1>
+
+			<div class="input_container">
+			    <input placeholder="Título" type="text" name="título" id="field_title" class='input_field' required>
+			</div>
+
+			<textarea id="field_copete_textarea" rows="2" placeholder="Copete" name="copete" minlength="50" maxlength="200" form="form_addarticle" class='input_field_text' style="min-height:5em;max-height:20vh;" required></textarea>
+
+			<div id="field_image_frame" class="input_img_container">
+
+				<label for="field_image" style="display:table; margin:0 auto">
+
+			  		<img id="field_image_preview" src="https://i.ibb.co/f4QLT9v/upload-photo-icon.png" alt="upload-photo-icon" border="0" style="width:100%;height:100%;max-width:250px;max-height:250px;object-fit:contain;cursor:pointer;"/>
+			  		<input type="file" name="imagen" id="field_image" style="display:none;text-align:center;" accept="image/*" onchange="loadImage(event)" class='input_field' required/>
+
+				</label>
+
+			</div>
+
+			<textarea id="field_body_textarea" rows="10" placeholder="Cuerpo del artículo" name="cuerpo" minlength="500" maxlength="5000" form="form_addarticle" class='input_field_text' style="min-height:15em;max-height:50vh;" required></textarea>
+
+			<div class="input_container">
+			    <input placeholder="Fuente" type="text" name="fuente" id="field_source" class='input_field' required>
+			</div>
+
+            <input type="submit" value="Cargar artículo" id='input_submit' class='input_submit' required>
+    </div>
+
+	<div id="successModal" class="modal">
+
+	  <div class="modal-content">
+		<div class="alert alert-success" role="alert">
+			<p style="margin:5px">El artículo educativo ha sido cargado con éxito</p>
+		</div>
+	    <p style="margin:5px">Puede gestionarlo en el panel de administración de artículos</p>
+	  </div>
+
+	</div>
+
+	<div id="errorModal" class="modal">
+
+	  <div class="modal-content">
+		<div class="alert alert-danger" role="alert">
+			<p style="margin:5px">Hubo un error en la carga del artículo</p>
+		</div>
+	    <p style="margin:5px">Por favor reintente mas tarde</p>
+	  </div>
+
+	</div>
+
+</body>
+
+</html>
