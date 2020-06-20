@@ -17,6 +17,15 @@
     text-align: right;
 }
 
+#title {
+    margin: 10px;
+}
+
+#preview {
+    margin:20px;
+    font-weight: bold;
+    filter: brightness(300%);
+}
 #div-description {
     overflow: hidden;
 }

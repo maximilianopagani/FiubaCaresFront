@@ -12,7 +12,7 @@ $(document).ready(function () {
         success: function (data) {
             document.title = 'FIUBA Cares - ' + data.title;
             $("#title").text(data.title);
-
+            $("#preview").text(data.preview);
 
             buildDescription(data.description, $("#div-description"));
 

@@ -30,7 +30,7 @@ function getArticleCardHTML(element) {
         '                    </div>\n' +
         '                    <div class="card-body">\n' +
         '                        <h4 class="card-title">' + element.title + '</h4>\n' +
-        '                        <p class="card-text">' + getDescription(element) + '</p>\n' +
+        '                        <p class="card-text">' + getPreview(element) + '</p>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '                <div class="card-footer">\n' +
@@ -44,12 +44,12 @@ function getArticleCardHTML(element) {
         '    </div>';
 }
 
-function getDescription(element, maxLength=120) {
-    if (element.hasOwnProperty('description')) {
-        if (element.description.length >= maxLength) {
-            return element.description.substring(0, maxLength-1) + '...';
+function getPreview(element, maxLength=300) {
+    if (element.hasOwnProperty('preview')) {
+        if (element.preview.length >= maxLength) {
+            return element.preview.substring(0, maxLength-1) + '...';
         }
-        return element.description;
+        return element.preview;
     }
     return '';
 }
