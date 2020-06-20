@@ -21,7 +21,7 @@
     overflow: hidden;
 }
 
-#description:first-letter
+#div-description p:first-child:first-letter
 {
     float:left;
     color:black;

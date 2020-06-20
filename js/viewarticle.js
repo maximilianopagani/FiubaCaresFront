@@ -12,7 +12,11 @@ $(document).ready(function () {
         success: function (data) {
             document.title = 'FIUBA Cares - ' + data.title;
             $("#title").text(data.title);
-            $("#description").text(data.description);
+
+
+            buildDescription(data.description, $("#div-description"));
+
+
             if (data.hasOwnProperty('img_src')) {
                 let imgArticle = $("#img-article");
                 imgArticle.attr('src', data.img_src);
@@ -25,5 +29,10 @@ $(document).ready(function () {
             $("#source-article").text(data.source);
         }
     });
-
 });
+
+function buildDescription(descriptionString, htmlDivElement) {
+    descriptionString.split(/\r?\n/).forEach(function (desc) {
+        htmlDivElement.append("<p>"+desc+"</p>");
+    })
+}
