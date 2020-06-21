@@ -17,10 +17,6 @@ function getEventCardHTML(element) {
         '    </div>';
 }
 
-function getURLParam(param){
-  return new URLSearchParams(window.location.search).get(param);
-}
-
 function deleteEvent(btn) {
     const id_event = $(btn).data("id");
     console.log(id_event);

@@ -1,0 +1,15 @@
+#container {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    padding: 15px 20px 40px;
+    border-radius: 50px;
+    background-color: #ffffff;
+}
+
+#title {
+    text-align: center;
+}
+
+.card {
+   border: 2px solid rgba(0,0,0,.125); 
+}
