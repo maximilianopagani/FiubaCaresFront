@@ -8,12 +8,13 @@
 }
 
 #form_wrapper {
-    width: 85%;
-    height: 85%;
-    margin: 30px auto 30px auto;
+    width: 82%;
+    height: 82%;
+    margin: 30px 15px 30px 10px;
     background-color: var(--form_bg);
     border-radius: 50px;
     padding: 5vh 15px;
+    float: right;
 }
 
 #form_addarticle {
