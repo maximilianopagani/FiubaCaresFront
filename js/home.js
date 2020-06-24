@@ -14,8 +14,9 @@ $(document).ready(function () {
     });
 
     $('.circle').click(function () {
+        $('#tipsWindow').text($(this).find('.tip-title').text());
+        $('#description-tip').text($(this).data('description'));
+        $('#link-tip').attr('href', $(this).data('link'));
         $('#tipsModal').modal('show');
-        $('#tipsWindow').html($(this).find('.tip-title').html());
     });
-
 });

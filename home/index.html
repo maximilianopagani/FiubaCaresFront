@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/home.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/modal-window.css">
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/home.js"></script>
@@ -28,27 +29,35 @@
 
 <div class="container">
     <div id="tips">
-        <div class="circle float-left" title="Ver más">
+        <div class="circle float-left" title="Ver más"
+             data-description="En realidad... no, en Argentina las pilas no se pueden reciclar aún. Pero hay alternativas que se pueden igualmente hacer. Para conocerlas, no te pierdas de visitar el siguiente artículo de dondereciclo.org.ar"
+             data-link="https://www.dondereciclo.org.ar/blog/todo-sobre-pilas-y-su-reciclaje/">
             <div class="inner-circle">
                 <p class="tip-title">¿Sabías que las pilas pueden reciclarse?</p>
                 <p class="view-more" style="display: none;">Ver más</p>
             </div>
         </div>
-        <div class="circle float-left" title="Ver más">
+        <div class="circle float-left" title="Ver más"
+             data-description="¿Sabías que reciclando tapitas podés ayudar a la Fundación Garrahan? Para consultar más información, podés hacerlo en el siguiente enlace."
+             data-link="http://www.vaporlospibes.com.ar/reciclado-de-tapitas">
             <div class="inner-circle">
-                <p class="tip-title">Otro tip</p>
+                <p class="tip-title">Reciclado de tapitas</p>
                 <p class="view-more" style="display: none;">Ver más</p>
             </div>
         </div>
-        <div class="circle float-left" title="Ver más">
+        <div class="circle float-left" title="Ver más"
+             data-description="Es muy importante que podamos separar correctamente los residuos. Podés saber más en el siguiente sitio."
+             data-link="https://www.buenosaires.gob.ar/ciudadverde/separacion/como-se-separan-los-residuos">
             <div class="inner-circle">
-                <p class="tip-title">Un tip más que hay</p>
+                <p class="tip-title">¿Cómo separar los residuos?</p>
                 <p class="view-more" style="display: none;">Ver más</p>
             </div>
         </div>
-        <div class="circle float-left" title="Ver más">
+        <div class="circle float-left" title="Ver más"
+             data-description="Hay países donde el agua es un recurso escaso, es muy importante usarlo correctamente. Te sugerimos leer las recomendaciones del siguiente sitio web para hacer un uso más responsable."
+             data-link="http://www.enress.gov.ar/medidas-para-hacer-uso-responsable-del-agua/">
             <div class="inner-circle">
-                <p class="tip-title">Que bkfkfk fkdkf okdfo kd</p>
+                <p class="tip-title">Uso responsable del agua</p>
                 <p class="view-more" style="display: none;">Ver más</p>
             </div>
         </div>
@@ -71,13 +80,16 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="tipsWindow"></h5>
+                <h5 class="w-100 modal-title text-center" id="tipsWindow"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                Bla bla bla
+                <p id="description-tip"></p>
+            </div>
+            <div class="modal-footer">
+                <a id="link-tip" target="_blank" href="" class="btn btn-primary-custom">Ver más</a>
             </div>
         </div>
     </div>

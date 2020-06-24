@@ -7,7 +7,7 @@
     --icon_color: #6b6b6b;
 }
 
-.modal-body {
+.modal-body-inscription {
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -24,11 +24,6 @@
     /* have some gap in between elements*/
     grid-gap: 20px;
     padding: 10% 5%;
-}
-
-h1,
-span {
-    text-align: center;
 }
 
 .input_container {
@@ -69,21 +64,6 @@ span {
 .input_field:focus {
     /* remove the outline */
     outline: none;
-}
-
-/* shift it a bit lower
-#create_account {
-    display: block;
-    position: relative;
-    top: 30px;
-}*/
-
-a:hover {
-    color: var(--submit_hover);
-}
-
-i {
-    color: var(--icon_color);
 }
 
 #registration-summary {

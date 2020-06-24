@@ -33,6 +33,8 @@ $(document).ready(function () {
 
 function buildDescription(descriptionString, htmlDivElement) {
     descriptionString.split(/\r?\n/).forEach(function (desc) {
-        htmlDivElement.append("<p>"+desc+"</p>");
+        if (desc.length > 0) {
+            htmlDivElement.append("<p>" + desc + "</p>");
+        }
     })
 }
