@@ -27,6 +27,8 @@ $(document).ready(function () {
             let dateTimeFormat = new Intl.DateTimeFormat('es-AR').format(date);
             $("#date").text(dateTimeFormat);
             $("#source-article").text(data.source);
+            $("hr").show();
+            $("#loading-spinner").hide();
         }
     });
 });

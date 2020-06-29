@@ -14,6 +14,7 @@ $(document).ready(function () {
                 event.preventDefault();
                 showModalInscription($(this));
             });
+            $("#loading-spinner").hide();
         }
     });
 

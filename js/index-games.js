@@ -10,6 +10,7 @@ $(document).ready(function () {
             data.forEach(function (element) {
                 container.append(getNewsletterCardHTML(element))
             });
+            $("#loading-spinner").hide();
         }
     });
 

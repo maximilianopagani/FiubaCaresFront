@@ -10,6 +10,7 @@ $(document).ready(function () {
             data.forEach(function (element) {
                 container.append(getArticleCardHTML(element))
             });
+            $("#loading-spinner").hide();
         }
     });
 
