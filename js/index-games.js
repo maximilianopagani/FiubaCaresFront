@@ -2,20 +2,20 @@ $(document).ready(function () {
     let container = $("#container");
     $.ajax({
         type: "GET",
-        url: "https://fiuba-cares-back.herokuapp.com/api/articles/",
+        url: "https://fiuba-cares-back.herokuapp.com/api/newsletter/",
         contentType: "application/json; charset=UTF-8;",
         headers: {Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.oF_jJKavmWrM6d_io5M5PBiK9AKMf_OcK4xpc17kvwI"},
         dataType: "json",
         success: function (data) {
             data.forEach(function (element) {
-                container.append(getArticleCardHTML(element))
+                container.append(getNewsletterCardHTML(element))
             });
         }
     });
 
 });
 
-function getArticleCardHTML(element) {
+function getNewsletterCardHTML(element) {
     let imgSrc = 'https://i.ibb.co/27h2dKB/noimage.png';  // imagen por defecto
     if (element.hasOwnProperty('img_src')) {
         if (isValidHttpUrl(element.img_src)) {
@@ -32,12 +32,7 @@ function getArticleCardHTML(element) {
         '                    </div>\n' +
         '                    <div class="card-body">\n' +
         '                        <h4 class="card-title">' + element.title + '</h4>\n' +
-        '                        <p class="card-text">' + getPreview(element) + '</p>\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '                <div class="card-footer">\n' +
-        '                    <div style="display: inline">\n' +
-        '                        <a href="viewarticle.html?article_id=' + element._id + '" class="btn btn-primary-custom float-right">Leer más</a>\n' +
+        '                        <p class="card-text">' + getDescription(element) + '</p>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '\n' +
@@ -46,14 +41,25 @@ function getArticleCardHTML(element) {
         '    </div>';
 }
 
-function getPreview(element, maxLength=300) {
-    if (element.hasOwnProperty('preview')) {
-        if (element.preview.length >= maxLength) {
-            return element.preview.substring(0, maxLength-1) + '...';
+function getDescription(element, maxLength=300) {
+    if (element.hasOwnProperty('description')) {
+        if (element.description.length >= maxLength) {
+            return element.description.substring(0, maxLength-1) +
+                '<span id="dots-'+element._id+'">' +
+                '...<a href="#" onclick="event.preventDefault(); viewMore(\''+element._id+'\');">mostrar más</a>' +
+                '</span>' +
+                '<span id="more-'+element._id+'" style="display: none">'+
+                element.description.substring(maxLength-1)+
+                '</span>';
         }
-        return element.preview;
+        return element.description;
     }
     return '';
+}
+
+function viewMore(eventId) {
+    $("#dots-"+eventId).hide();
+    $("#more-"+eventId).show();
 }
 
 function isValidHttpUrl(string) {

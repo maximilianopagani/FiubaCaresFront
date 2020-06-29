@@ -83,7 +83,9 @@ function showMessageErrorInscription() {
 function getEventCardHTML(element) {
     let imgSrc = 'https://i.ibb.co/27h2dKB/noimage.png';  // imagen por defecto
     if (element.hasOwnProperty('img_src')) {
-        imgSrc = element.img_src;
+        if (isValidHttpUrl(element.img_src)) {
+            imgSrc = element.img_src;
+        }
     }
     let date = new Date(element.meeting_datetime);
     let dateTimeFormat = new Intl.DateTimeFormat('es-AR').format(date);
@@ -142,4 +144,14 @@ function getDescription(element, maxLength=300) {
 function viewMore(eventId) {
     $("#dots-"+eventId).hide();
     $("#more-"+eventId).show();
+}
+
+function isValidHttpUrl(string) {
+    let url;
+    try {
+        url = new URL(string);
+    } catch (_) {
+        return false;
+    }
+    return url.protocol === "http:" || url.protocol === "https:";
 }
