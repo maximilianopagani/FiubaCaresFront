@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/index-common.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/games.css">
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/index-games.js"></script>
@@ -21,13 +22,31 @@
             <a class="nav-link color-green" href="../articles/">Material</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link color-green" href="../games/index.html">Juegos y Concursos</a>
+            <a class="nav-link color-green" href="../games">Juegos y Concursos</a>
         </li>
     </ul>
 </nav>
 
+<div id="quiz-container" class="quiz-container">
+
+    <div class="single-quiz-container" onclick="window.location.href='../games/trivia.html?quiz_id=reciclaje';" style="margin-right:30px">
+        <img src="https://i.ibb.co/7pz8G1Y/trivia-reciclaje.jpg" style="max-width:100%;max-height:150px;"/>
+        <h1 class="quiz-title">¿Cuánto sabes sobre reciclaje?</h1>
+        <p class="quiz-desc"> Plástico, vidrio, cartón... todo puede ser más que basura. Demuestra con esta trivia cuánto sabes sobre el reciclaje de los desechos que producimos a diario.
+        </p>
+    </div>
+
+    <div class="single-quiz-container" onclick="window.location.href='../games/trivia.html?quiz_id=ambiente';" style="margin-left:30px">
+        <img src="https://i.ibb.co/yWtDyr7/trivia-ambiente.jpg" style="max-width:100%;max-height:150px;"/>
+        <h1 class="quiz-title">Día mundial del medio ambiente</h1>
+        <p class="quiz-desc"> El pasado 5 de junio fué el día mundial del medio ambiente. ¿Qué tanto sabes sobre su cuidado? Haz click aquí y prueba tus conocimientos en una trivia.
+        </p>
+    </div>
+
+</div>
+
 <div id="container" class="container">
-    <h1 id="title">Juegos y Consursos</h1>
+    <h1 id="title">Novedades y concursos</h1>
     <div id="loading-spinner" class="text-center">
         <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>

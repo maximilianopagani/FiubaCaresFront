@@ -1,0 +1,27 @@
+#quiz-container {
+    width: 70%;
+    margin: 30px auto 0 auto;
+    background: unset;
+    display: flex;
+}
+
+.single-quiz-container {
+	flex: auto;
+    width: 70%;
+    margin: auto;
+    padding: 20px 10px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.quiz-title {
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
+.quiz-desc {
+	padding: 0 10px;
+	margin: 0;
+}
