@@ -207,6 +207,12 @@ function resetSlide(input_answers) {
 $(document).ready(function () {
 
   const quizId = getURLParam("quiz_id");
+
+  if(!quizId || !(quizId in quizData)) {
+    location.href = "../games/index.html";
+    return 1;
+  }
+
   const quizContainer = document.getElementById('quiz-container');
   const resultsContainer = document.getElementById('results');
   const input_answers = document.getElementsByName('input_answer');
