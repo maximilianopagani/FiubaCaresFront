@@ -257,6 +257,7 @@ $(document).ready(function () {
 
   function showQuizResult() {
     resultsContainer.textContent = "¡Has terminado la trivia! \n Tu puntuación fue de " + score + " respuesta/s correctas sobre " + myQuestions.length + " preguntas.";
+    document.getElementById("quiz-end").style.display = "inline-block"
   }
 
   $("#correctAnswerModal").on("hidden.bs.modal", function () {
@@ -265,6 +266,14 @@ $(document).ready(function () {
 
   $("#wrongAnswerModal").on("hidden.bs.modal", function () {
     showSlide(currentSlide+1);
+  });
+
+  $('.btn-redirect-articles').click(function () {
+      location.href = "../articles/";
+  });
+
+  $('.btn-redirect-games').click(function () {
+      location.href = "../games/index.html";
   });
 
   showSlide(currentSlide);
