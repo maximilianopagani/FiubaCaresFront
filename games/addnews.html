@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>FIUBA Cares - Nueva noticia en Juegos y Concursos</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/addnews.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/left-menu-admin.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/addnews.js"></script>
+
+</head>
+
+<body>
+<div class="sidenav">
+  <a class="navbar-brand color-green" href="../home/"><img src="https://i.ibb.co/MRr42Gg/icons8-recycle-26.png"> FIUBA Cares</a>
+  <a href="../events/adminevents.html">Administrar eventos y charlas</a>
+  <a href="../articles/adminarticles.html">Administrar artículos educativos</a>
+  <a href="#">Administrar juegos y concursos</a>
+</div>
+    <div id="form_wrapper">
+
+    	<form id="form_addnews"  method="POST" y enctype="multipart/form-data">
+
+            <h1>Nueva noticia</h1>
+
+			<div class="input_container">
+			    <input placeholder="Título" type="text" name="título" id="field_title" class='input_field' required>
+			</div>
+
+			<div id="field_image_frame" class="input_img_container">
+
+				<label for="field_image" style="display:table; margin:0 auto">
+
+			  		<img id="field_image_preview" src="https://i.ibb.co/f4QLT9v/upload-photo-icon.png" alt="upload-photo-icon" border="0" style="width:100%;height:100%;max-width:250px;max-height:250px;object-fit:contain;cursor:pointer;"/>
+			  		<input type="file" name="imagen" id="field_image" style="display:none;text-align:center;" accept="image/*" onchange="loadImage(event)" class='input_field' required/>
+
+				</label>
+
+			</div>
+
+			<textarea id="field_body_textarea" rows="10" placeholder="Cuerpo de la noticia" name="cuerpo" minlength="500" maxlength="5000" form="form_addnews" class='input_field_text' style="min-height:10em;max-height:40vh;" required></textarea>
+
+            <input type="submit" value="Subir noticia" id='input_submit' class='input_submit' required>
+    </div>
+
+	<div id="successModal" class="modal">
+
+	  <div class="modal-content">
+		<div class="alert alert-success" role="alert">
+			<p style="margin:5px">La noticia ha sido cargada con éxito</p>
+		</div>
+	    <p style="margin:5px">Puede gestionarlo en el panel de administración de juegos y concursos</p>
+	  </div>
+
+	</div>
+
+	<div id="errorModal" class="modal">
+
+	  <div class="modal-content">
+		<div class="alert alert-danger" role="alert">
+			<p style="margin:5px">Hubo un error en la carga de la noticia</p>
+		</div>
+	    <p style="margin:5px">Por favor reintente mas tarde</p>
+	  </div>
+
+	</div>
+
+</body>
+
+</html>
