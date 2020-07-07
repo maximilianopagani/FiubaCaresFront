@@ -96,7 +96,7 @@ function getEventCardHTML(element) {
         '            <div class="card">\n' +
         '                <div class="card-horizontal">\n' +
         '                    <div class="img-square-wrapper">\n' +
-        '                        <img class="" src="' + imgSrc + '" alt="Card image cap">\n' +
+        '                        <img class="img-square" src="' + imgSrc + '" alt="Card image cap">\n' +
         '                    </div>\n' +
         '                    <div class="card-body">\n' +
         '                        <h4 id="event-title-' + element._id + '" class="card-title">' + element.title + '</h4>\n' +
